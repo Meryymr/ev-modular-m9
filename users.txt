@@ -6,5 +6,13 @@
     "password": "pedro123",
     "rol": "administrador",
     "creadoEn": "2026-06-16T23:21:06.229Z"
+  },
+  {
+    "id": 1781653596315,
+    "nombre": "Maria Melo",
+    "email": "maria@gmail.com",
+    "password": "maria123",
+    "rol": "usuario",
+    "creadoEn": "2026-06-16T23:46:36.315Z"
   }
 ]
