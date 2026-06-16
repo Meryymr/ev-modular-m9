@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1781652066229,
+    "nombre": "Pedro Campos",
+    "email": "pcampos@gmail.com",
+    "password": "pedro123",
+    "rol": "administrador",
+    "creadoEn": "2026-06-16T23:21:06.229Z"
+  }
+]
