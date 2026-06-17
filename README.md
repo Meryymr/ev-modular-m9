@@ -13,3 +13,6 @@ Backend desarrollado con Node.js, Express, Sequelize ORM y PostgreSQL, integrado
 - **Base de Datos & ORM:** PostgreSQL, Sequelize ORM
 - **Seguridad:** JSON Web Tokens (JWT), Bcrypt (Salt factor: 10)
 - **Frontend:** HTML5, CSS3, JavaScript Vanilla, Bootstrap 5
+
+### Portafolio personal + Portafolio Backend
+Se implementa un portafolio personal, con algunas pestañas como contacto o login, que se linkea directamente con el proyecto principal: Sistema de gestión de tareas
