@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "titulo": "Simulación Módulo 6: Configurar Servidor",
+    "estado": "Completado"
+  },
+  {
+    "id": 2,
+    "titulo": "Simulación Módulo 6: Implementar Handlebars",
+    "estado": "Pendiente"
+  },
+  {
+    "id": 3,
+    "titulo": "Simulación Módulo 6: Persistencia Temporal JSON",
+    "estado": "En Progreso"
+  }
+]
