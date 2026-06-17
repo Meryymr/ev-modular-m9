@@ -142,3 +142,48 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 });
+
+//Consumo de API externa 
+document.addEventListener('DOMContentLoaded', async () => {
+    const contenedorTareas = document.getElementById('contenedorTareas');
+    
+    if (contenedorTareas) {
+        try {
+            const respuesta = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
+            const posts = await respuesta.json();
+            contenedorTareas.innerHTML = '';
+
+            posts.forEach(post => {
+                const tarjetaHtml = `
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-dark">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="card-title text-capitalize text-truncate" title="${post.title}">
+                                        ${post.title}
+                                    </h5>
+                                    <p class="card-text text-muted small">
+                                        ${post.body.substring(0, 100)}...
+                                    </p>
+                                </div>
+                                <div class="mt-3 d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-info text-dark">Tareas simuladas</span>
+                                    <small class="text-secondary">ID: #${post.id}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                contenedorTareas.insertAdjacentHTML('beforeend', tarjetaHtml);
+            });
+
+        } catch (error) {
+            console.error('Error al consumir la API externa:', error);
+            contenedorTareas.innerHTML = `
+                <div class="alert alert-danger col-12" role="alert">
+                    No se pudieron cargar las tareas simuladas de la API externa.
+                </div>
+            `;
+        }
+    }
+});
