@@ -1,0 +1,40 @@
+@api = http://localhost:3000/api
+
+### Registrar nuevo usuario 
+POST {{api}}/usuarios/registro
+Content-Type: application/json
+
+{
+   "nombre": "Maria Poblete",
+   "email": "mariapoblete@gmail.com", 
+   "password": "Clave123", 
+   "rol": "usuario" 
+}
+
+### Iniciar sesión 
+POST {{api}}/usuarios/login
+Content-Type: application/json
+
+{
+    "email": "mariapoblete@gmail.com",
+    "password": "Clave123"
+}
+
+### Crear tarea Sin token - 401 
+POST {{api}}/tareas
+Content-Type: application/json
+
+{
+    "titulo": "Hacker", 
+    "descripcion": "Intentando entrar sin permisos"
+}
+
+### Crear tarea con Token - 201 
+POST {{api}}/tareas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tYnJlIjoiTWFyaWEgUG9ibGV0ZSIsInJvbCI6InVzdWFyaW8iLCJpYXQiOjE3ODE2NTY2MDMsImV4cCI6MTc4MTY2MzgwM30.Vft5NuqDSaJRcj37KR8XtH-58eBsIAaetv8BfPEMdcA
+Content-Type: application/json
+
+{
+    "titulo": "JWT y backend",
+    "descripcion": "Protegidos con token"
+}
