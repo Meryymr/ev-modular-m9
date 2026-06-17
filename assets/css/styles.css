@@ -56,6 +56,12 @@ color: white;
             text-align: center;
  }
 
+.carousel-img-custom {
+    height: 450px; 
+    object-fit:contain;
+    object-position: center; 
+}
+
 footer {
     background-color: #52022d;
     color: #ffe9fc;
