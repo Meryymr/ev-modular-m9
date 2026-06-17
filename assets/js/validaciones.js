@@ -112,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-    
                 "Authorization": `Bearer ${token}`
               },
               body: JSON.stringify({ titulo, descripcion }),
@@ -125,8 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
               const modalElement = document.getElementById("modalTarea");
               const modal = bootstrap.Modal.getInstance(modalElement);
+             if (document.activeElement) {
+    document.activeElement.blur();
+  }
               modal.hide();
-
               formTarea.reset();
               formTarea.classList.remove("was-validated");
             } else {

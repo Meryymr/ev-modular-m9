@@ -4,5 +4,6 @@ import { registrarUsuario, loginUsuario } from '../controllers/usuariosControlle
 const router = express.Router();
 
 router.post('/registro', registrarUsuario); 
+router.post('/login', loginUsuario);
 
 export default router;

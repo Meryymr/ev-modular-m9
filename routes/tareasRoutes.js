@@ -6,9 +6,11 @@ import {
     eliminarTarea 
 } from '../controllers/tareasController.js';
 
+import { verificarToken } from '../middlewares/auth.js'
+
 const router = express.Router();
 
-router.post('/', crearTarea);                          
+router.post('/', verificarToken, crearTarea);                          
 router.get('/usuario/:usuarioId', obtenerTareasPorUsuario); 
 router.put('/:id', actualizarTarea);              
 router.delete('/:id', eliminarTarea); 
